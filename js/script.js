@@ -23,4 +23,28 @@ openBtn = document.querySelector('.open');
   }
 
   createCard()
+
+  let card = document.querySelector('.cart'),
+      closeBtn = document.querySelector(".close"),
+      field = document.querySelector('.cart-field');
+
+  openBtn.addEventListener("click", function() {
+    card.style.display = 'block';
+  })
+
+  closeBtn.addEventListener("click", function() {
+    card.style.display = 'none';
+  })
+
+  buttons.forEach(function(item, i) {
+    item.addEventListener('click', function() {
+      let cloneItem = products[i].cloneNode(true),
+      btn = cloneItem.querySelector('button');
+
+      btn.remove();
+      field.appendChild(cloneItem)
+      products[i].remove()
+
+    })
+  })
 })
