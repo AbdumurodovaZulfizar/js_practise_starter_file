@@ -15,8 +15,12 @@ openBtn = document.querySelector('.open');
     continer.classList.add("cart-field");
     close.classList.add("close");
     heading.textContent = `Sizning mahsulotlaringiz`;
-    
-
+    close.textContent = `Yopish`;
+    card.appendChild(heading);
+    card.appendChild(continer);
+    card.appendChild(close);
+    document.body.appendChild(card);
   }
 
+  createCard()
 })
